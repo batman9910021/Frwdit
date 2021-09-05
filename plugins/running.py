@@ -31,13 +31,13 @@ async def run(bot, message):
     async for message in bot.USER.search_messages(chat_id=FROM,offset=Config.SKIP_NO,limit=Config.LIMIT,filter=FILTER):
         try:
             if message.video:
-                file_name = message.video.file_name
+                file_name = message.caption
             elif message.document:
-                file_name = message.document.file_name
+                file_name = message.caption
             elif message.audio:
-                file_name = message.audio.file_name
+                file_name = message.caption
             else:
-                file_name = None
+                file_name = ""
             await bot.copy_message(
                 chat_id=TO,
                 from_chat_id=FROM,
