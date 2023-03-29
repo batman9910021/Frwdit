@@ -13,7 +13,7 @@ class Config:
     BOT_SESSION = os.environ.get("BOT_SESSION", "bot") 
     CAPTION = os.environ.get("CAPTION", "")
     FROM_CHANNEL = os.environ.get("FROM_CHANNEL", "@love_is_important")
-    FILTER_TYPE = os.environ.get("FILTER_TYPE", "")
+    FILTER_TYPE = os.environ.get("FILTER_TYPE", "empty")
     OWNER_ID = os.environ.get("OWNER_ID", "5015968435")
     LIMIT = int(os.environ.get("LIMIT", "100000"))
     SKIP_NO = int(os.environ.get("SKIP_NO", "0"))
